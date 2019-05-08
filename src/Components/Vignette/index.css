@@ -1,0 +1,77 @@
+.vignette-parent {
+    position: relative;
+    height: 40vh;
+    display: flex;
+}
+.vignette-enfant {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 56.26%;
+    box-shadow: 5px 5px 5px 5px green;
+}
+.image-student{
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    
+}
+.container-image{
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+}
+
+.prev{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    z-index: 1;
+    font-size: 100px;
+    color: white;
+}
+.next{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    z-index: 1;
+    font-size: 100px;
+    color: white;
+
+}
+.description {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.description p {
+    margin: 0;
+}
+
+@media screen and (min-width: 500px) {
+    .vignette-enfant {
+      width: 30%;
+      padding-bottom: 0;
+    }
+    .image-container{
+        padding-bottom: 56.25%;
+        width: auto;
+        max-width: 100%;
+    }
+    .vignette-parent {
+        height: 60vh;
+        margin:  0 20px;
+        justify-content: space-around;
+      }
+  }
