@@ -49,7 +49,7 @@ class Vignette extends React.Component {
         })
     }
 
-    addOne = () => (
+ addOne = () => (
         this.setState({
             startIndex: this.state.startIndex + this.state.endIndex
 
