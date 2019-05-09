@@ -1,0 +1,20 @@
+code {
+
+  color: rgba(0, 255, 0, .7);
+  text-shadow: rgba(255, 255, 255, .8) 0px 0px 4px;
+  background: #000; 
+}   
+body {
+  background: #000;
+
+}
+.blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
