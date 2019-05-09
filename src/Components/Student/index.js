@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
+import Header from '../Header/index'
 
 
 class Student extends Component {
@@ -25,6 +26,8 @@ componentDidMount() {
         console.log(this.state.student)
 
         return (
+            <React.Fragment>
+            <Header />
             <div className="Student">
 
                 <ul>
@@ -47,6 +50,7 @@ componentDidMount() {
                     <li>Hard Skills : {this.state.student.hardkils}</li>
                 </ul>
             </div>
+            </React.Fragment>
         );
     };
 };
