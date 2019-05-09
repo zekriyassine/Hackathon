@@ -1,10 +1,11 @@
 import React from 'react';
-import './App.css';
+import './App.css'
 import { Switch, Route } from 'react-router-dom';
 import Vignette from './Components/Vignette';
 import Student from './Components/Student/index';
 import Form from './Components/Form/index';
 import Temp from './Components/Temp/index';
+
 
 function App() {
   return (
