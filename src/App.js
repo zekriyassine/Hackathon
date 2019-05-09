@@ -5,6 +5,7 @@ import Header from './Components/Header/index';
 import Vignette from './Components/Vignette';
 import Student from './Components/Student';
 import Terminal from './Components/Terminal';
+import Form from './Components/Form/index'
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Route exact path="/" />
         <Route path="/home" component={Vignette} />
         <Route path="/student/:id" component={Student} />
-        <Route path="/form" />
+        <Route path="/form" component={Form} />
       </Switch>
     </div>
   );

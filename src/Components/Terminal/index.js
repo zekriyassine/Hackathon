@@ -5,7 +5,7 @@ class Terminal extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {
+        this.state = { eleve : this.props.info
         };
 
    
@@ -13,7 +13,7 @@ class Terminal extends React.Component {
     };
     render() {  
         return(
-            <code>.<span class="blink">_</span></code>
+            <code>{this.props.info.toString()}<span class="blink">_</span></code>
 
         )
 } 
