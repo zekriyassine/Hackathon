@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" />
-        <Route path="/home" />
+        <Route path="/home" component={Vignette} />
         <Route path="/student" />
         <Route path="/form" />
       </Switch>
