@@ -2,11 +2,13 @@
     position: relative;
     height: 40vh;
     display: flex;
+    width: 100%
 }
 .vignette-enfant {
     position: relative;
     background-color: black;
-    box-shadow: 5px 5px 5px 5px green;
+    width: 80%;
+    margin: 40px auto;
 }
 
 
@@ -49,6 +51,11 @@
     margin: 0;
 }
 
+.terminal{
+    width: 0%;
+    display: none;
+}
+
 @media screen and (min-width: 500px) {
     .vignette-enfant {
       width: 45%;
@@ -58,7 +65,27 @@
         height: 60vh;
         margin:  0 20px;
         justify-content: space-around;
+        width: 65%;
       }
+      .container-display{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+    .terminal{
+        width: 30%;
+        margin: 15px;
+        display: block;
+    }
+    .prev{
+        top: 30%;
+        left: 4%;
+
+    }
+    .next{
+        top: 30%;
+        right:4%;
+    }
   }
   @media screen and (min-width: 900px) {
     .vignette-enfant {

@@ -1,6 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 import './index.css'
+import Header from '../Header/index';
+import Terminal from '../Terminal/index';
 
 class Vignette extends React.Component {
     constructor(props) {
@@ -25,31 +27,31 @@ class Vignette extends React.Component {
         this.resize = window.addEventListener('resize', this.handleRezise);
     }
 
-    componentDidUpdate(prevProps, prevState){
-        if(prevState.perso !== this.state.perso){
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.perso !== this.state.perso) {
             this.handleRezise();
         }
-        
+
     }
 
-    componentWillUnmount(){
-        window.removeEventListener('resize',this.resize);
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.resize);
     }
-    
+
     handleRezise = () => {
         let index = 1;
-        if(window.matchMedia("(min-width: 900px)").matches){
+        if (window.matchMedia("(min-width: 900px)").matches) {
             index = 3;
-            
-        }else if(window.matchMedia("(min-width: 500px)").matches){
+
+        } else if (window.matchMedia("(min-width: 500px)").matches) {
             index = 2;
         }
         this.setState({
-            endIndex : index
+            endIndex: index
         })
     }
 
- addOne = () => (
+    addOne = () => (
         this.setState({
             startIndex: this.state.startIndex + this.state.endIndex
 
@@ -61,13 +63,13 @@ class Vignette extends React.Component {
 
         })
     )
-    
-    render() {  
+
+    render() {
         const { startIndex, endIndex } = this.state;
-      
+
         const listEleve = this.state.perso.slice(startIndex, startIndex + endIndex).map(elem => (
             <NavLink to={`./Student/${elem.id}`} className="vignette-enfant">
-                <div className="image-container" style={{backgroundImage: `url(${elem.picture})`}}>
+                <div className="image-container" style={{ backgroundImage: `url(${elem.picture})` }}>
                 </div>
 
 
@@ -77,13 +79,20 @@ class Vignette extends React.Component {
                 </div>
             </NavLink>
         ))
-      
+
         return (
             <React.Fragment>
-                <div className="vignette-parent">
-                       <label onClick={this.removeOne} className="prev">&#x2039;</label>
-                    {listEleve}
-                    <label onClick={this.addOne} className="next">&#x203a;</label>
+                <Header />
+                <div className="container-display">
+                    
+                    <div className="vignette-parent">
+                        <label onClick={this.removeOne} className="prev">&#x2039;</label>
+                        {listEleve}
+                        <label onClick={this.addOne} className="next">&#x203a;</label>
+                    </div>
+                    <div className="terminal">
+                    <Terminal  />
+                    </div>
                 </div>
 
 

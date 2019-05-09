@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.css'
 import Terminal from  '../Terminal/index'
+import Header from '../Header/index';
 
 class Form extends React.Component {
     constructor(props) {
@@ -49,6 +50,7 @@ class Form extends React.Component {
     render() {
         return (
             <React.Fragment>
+                <Header />
                 <Terminal info={this.state}/>
                 <div className="form-eleve">
                 <h1 className="title-form">Ajouter un étudiant</h1>
