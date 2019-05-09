@@ -91,7 +91,7 @@ class Vignette extends React.Component {
                         <label onClick={this.addOne} className="next">&#x203a;</label>
                     </div>
                     <div className="terminal">
-                    <Terminal  />
+                    <Terminal info={this.state}  />
                     </div>
                 </div>
 
