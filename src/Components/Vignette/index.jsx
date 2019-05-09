@@ -33,7 +33,7 @@ class Vignette extends React.Component {
     }
 
     componentWillUnmount(){
-        window.removeEventListener(this.resize);
+        window.removeEventListener('resize',this.resize);
     }
     
     handleRezise = () => {

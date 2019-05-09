@@ -32,9 +32,9 @@ class Header extends React.Component {
             <div className="burger"></div>
           </div>
           <ul className="navigation">
-              <li><NavLink activeClassName="active" exact to="/">./home</NavLink></li>
+              <li><NavLink activeClassName="active" to="/home" >./home</NavLink></li>
               <li><NavLink activeClassName="active" to="">./student</NavLink></li>
-              <li><NavLink activeClassName="active" to="">./management</NavLink></li>
+              <li><NavLink activeClassName="active" to="/form">./management</NavLink></li>
               <li><NavLink activeClassName="active" to=""></NavLink></li>
           </ul>
       </div>
