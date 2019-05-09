@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './index.css';
 import Header from '../Header/index'
-
+import Terminal from '../Terminal/index'
 
 class Student extends Component {
     constructor(props) {
@@ -14,8 +14,8 @@ class Student extends Component {
 
 
 componentDidMount() {
-    const id = this.props.match.params.id
-    fetch(`https://warm-sierra-59608.herokuapp.com/api/user?userId=${id}`)
+    
+    fetch(`https://warm-sierra-59608.herokuapp.com/api/user?userId=`)
         .then(res => res.json())
         .then(data =>
              this.setState({ student : data }))
@@ -50,6 +50,7 @@ componentDidMount() {
                     <li>Hard Skills : {this.state.student.hardkils}</li>
                 </ul>
             </div>
+            <Terminal info={this.state.student} />
             </React.Fragment>
         );
     };
