@@ -8,7 +8,9 @@ import "./index.css";
 const Portal = (props) => (
 
 	<div>
-		<<img className="logo" src={logo1} alt="logo1"></img>
+		<img className="logo" src={logo1} alt="logo1"></img>
 	</div>
 
 )
+
+export default Portal;
