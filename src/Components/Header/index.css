@@ -40,7 +40,7 @@ a {
 }
 
 
-img {
+.container-logo img {
 	width: 20vw;
 	max-width: 80px;
 }

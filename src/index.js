@@ -10,10 +10,13 @@ ReactDOM.render(
         <App />
     </BrowserRouter>
     , document.getElementById('root'));
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> a2e6e370213fbe895b68de183c6d95a14408ce28
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
