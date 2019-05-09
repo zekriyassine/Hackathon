@@ -7,14 +7,14 @@ class Student extends Component {
         super(props);
 
         this.state =  {
-            student: [],
+            student: {},
         };
     }
 
 
 componentDidMount() {
     const id = this.props.match.params.id
-    fetch(`https://warm-sierra-59608.herokuapp.com/api/users${id}`)
+    fetch(`https://warm-sierra-59608.herokuapp.com/api/user?userId=${id}`)
         .then(res => res.json())
         .then(data =>
              this.setState({ student : data }))
@@ -22,7 +22,7 @@ componentDidMount() {
     }
 
     render() {
-
+        console.log(this.state.student)
 
         return (
             <div className="Student">
@@ -31,7 +31,7 @@ componentDidMount() {
                     <li>
                         Name : {this.state.student.name}
                     </li>
-                    <li>Last Name : {this.state.last}</li>
+                    <li>Last Name : {this.state.lastName}</li>
                     <li>Gender : {this.state.student.gender}</li>
                     <li>Age : {this.state.student.age}</li>
 

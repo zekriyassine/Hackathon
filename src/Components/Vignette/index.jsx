@@ -75,7 +75,7 @@ class Vignette extends React.Component {
         }
 
         const listEleve = this.state.perso.slice(this.state.startIndex, addIndex + this.state.startIndex).map(elem => (
-            <NavLink to={`./Student/${elem.id}`} className="vignette-enfant">
+            <NavLink to={`./student/${elem._id}`} className="vignette-enfant">
                 <div className="image-container">
                 <img className="image-student" src={elem.picture} alt="Etudiant" />
                 </div>
