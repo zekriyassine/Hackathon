@@ -5,15 +5,13 @@ class Terminal extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { eleve : this.props.info
+        this.state = { eleve : this.props.info || ""
         };
-
-   
-
     };
     render() {  
+        const { eleve } = this.state;
         return(
-            <code>{this.props.info.toString()}<span class="blink">_</span></code>
+            <code> { JSON.stringify(eleve) } <span class="blink">_</span></code>
 
         )
 } 

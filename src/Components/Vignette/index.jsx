@@ -62,55 +62,11 @@ class Vignette extends React.Component {
         })
     )
     
-<<<<<<< HEAD
-    render() {
-
-        let addIndex = 1
-        const mq = window.matchMedia( "(min-width: 500px)" );
-        if (mq.matches) {
-            addIndex = 2
-            this.addOne = () => (
-                this.setState({
-                    startIndex: this.state.startIndex + 2
-        
-                })
-            )
-            this.removeOne = () => (
-                this.setState({
-                    startIndex: this.state.startIndex - 2
-        
-                })
-            )
-            
-            const lq = window.matchMedia( "(min-width: 900px)" );
-            if (lq.matches) {
-                addIndex = 3
-                this.addOne = () => (
-                    this.setState({
-                        startIndex: this.state.startIndex + 3
-            
-                    })
-                )
-                this.removeOne = () => (
-                    this.setState({
-                        startIndex: this.state.startIndex - 3
-            
-                    })
-                )
-                
-                
-            }
-        }
-
-        const listEleve = this.state.perso.slice(this.state.startIndex, addIndex + this.state.startIndex).map(elem => (
-            <NavLink to={`./student/${elem._id}`} className="vignette-enfant">
-=======
     render() {  
         const { startIndex, endIndex } = this.state;
       
         const listEleve = this.state.perso.slice(startIndex, startIndex + endIndex).map(elem => (
             <NavLink to={`./Student/${elem.id}`} className="vignette-enfant">
->>>>>>> ea7e632d5adab42fb8ef6d398a454b467e8e42c0
                 <div className="image-container">
                 <img className="image-student" src={elem.picture} alt="Etudiant" />
                 </div>
