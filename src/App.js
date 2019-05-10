@@ -11,6 +11,7 @@ import Portal from './Components/Portal/index';
 function App() {
   return (
     <div className="App">
+      <Portal />
       <Switch>
         <Route exact path="/" component={Portal} />
         <Route path="/home" component={Vignette} />

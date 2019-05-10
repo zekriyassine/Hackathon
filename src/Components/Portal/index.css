@@ -1,0 +1,28 @@
+.portal-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.logo-portal {
+    text-align: center;
+    margin: auto;
+}
+
+.logo-portal img {
+    width: 45%;
+    max-width: 1000px;
+    border: 1px solid white;
+    text-align: center;
+}
+
+.portal-parent p {
+    color: white;
+    margin-top: 50px;
+    font-size: 150%;
+}
+.logo-wcs-portal {
+  transform: rotateY(25deg);
+}
+
