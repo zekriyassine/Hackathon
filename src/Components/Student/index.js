@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './index.css';
 import Header from '../Header/index'
 import Terminal from '../Terminal/index'
+import Footer from '../Footer/index';
 
 class Student extends Component {
     constructor(props) {
@@ -51,6 +52,7 @@ componentDidMount() {
                 </ul>
             </div>
             <Terminal info={this.state.student} />
+            <Footer />
             </React.Fragment>
         );
     };
