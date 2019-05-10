@@ -1,3 +1,6 @@
+.container-display{
+    margin: 30px;
+}
 .vignette-parent {
     position: relative;
     height: 40vh;
@@ -54,6 +57,8 @@
 .terminal{
     width: 0%;
     display: none;
+    word-wrap: break-word;
+    padding: 10px;
 }
 
 @media screen and (min-width: 500px) {
@@ -89,6 +94,6 @@
   }
   @media screen and (min-width: 900px) {
     .vignette-enfant {
-        width: 30%
+        width: 30%;
 }
   }

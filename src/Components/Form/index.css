@@ -1,11 +1,17 @@
 .title-form{
     color: white;
+    font-family: "cd ", sans-serif;
+    font-size: 20px;
 }
 .form-eleve{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+}
+.terminal-form{
+    display: none;
 }
 
 .form-data{
@@ -18,6 +24,8 @@
 }
 .form-data label {
     color: white;
+    font-family: "Press Start 2P", sans-serif; 
+    font-size: 10px  
 }
 input  {
     width: 100%;
@@ -39,9 +47,26 @@ input  {
     color: black;
 }
 
+
   @media screen and (min-width: 500px) {
     .form-data label{
         display: block;
     }
    
+    .terminal-form{
+        display: block;
+        width: 35%;
+        margin: 80px;
+        word-wrap: break-word;
+    }
+    .form-eleve{
+
+        width: 65%;
+        border-right: 1px solid grey;
+    }
+    .display-container{
+        display: flex;
+        justify-content: space-around;
+    }
+    
   }

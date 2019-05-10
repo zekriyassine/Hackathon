@@ -2,6 +2,7 @@ import React from 'react'
 import './index.css'
 import Terminal from  '../Terminal/index'
 import Header from '../Header/index';
+import Footer from '../Footer/index';
 
 class Form extends React.Component {
     constructor(props) {
@@ -25,15 +26,28 @@ class Form extends React.Component {
         })
 
     )
+
+    fileChange = (event) => {
+        console.log(this._input.file)
+       /*  this.setState({
+            [event.target.name]: event.target.current.file[0].name,
+        }) */
+    }
     handleSubmit = (event) => {
         event.preventDefault();
-        const url = "https://warm-sierra-59608.herokuapp.com/api/users";
+        let formData = new FormData();
+        formData.append('picture', this._picture.files[0]);
+
+        console.log(formData.get('picture'))
+
+        
+        const url = "https://warm-sierra-59608.herokuapp.com/api/add-user";
         const config = {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
+                "Content-Type": "multipart/form-data",
             },
-            body: JSON.stringify(this.state),
+            body:  formData
         };
 
         fetch(url, config)
@@ -44,14 +58,14 @@ class Form extends React.Component {
                 } else {
                     alert(`Elève enrengistré`);
                 }
-            })
+            }) 
     }
  
     render() {
         return (
             <React.Fragment>
                 <Header />
-                <Terminal info={this.state}/>
+                <div className="display-container">
                 <div className="form-eleve">
                 <h1 className="title-form">Ajouter un étudiant</h1>
 
@@ -123,8 +137,7 @@ class Form extends React.Component {
                                 accept="image/*"
                                 id="picture"
                                 name="picture"
-                                onChange={this.onChange}
-                                value={this.state.picture}
+                                ref={(elem) => this._picture = elem}
                                 placeholder="Photo"
 
 
@@ -136,8 +149,7 @@ class Form extends React.Component {
                             <input className="file" type="file"
                                 id="cv"
                                 name="cv"
-                                onChange={this.onChange}
-                                value={this.state.cv}
+                                ref={(elem) => this._cv = elem}
                                 placeholder="Votre Curriculum vitae"
 
                             />
@@ -150,7 +162,14 @@ class Form extends React.Component {
                     </form>
 
 
+                </div >
+                <div className="terminal-form">
+                <Terminal  info={this.state}/>
                 </div>
+                
+                </div>
+                <Footer />
+
 
             </React.Fragment>
         )
