@@ -3,6 +3,7 @@ import './index.css';
 import Header from '../Header/index'
 import Terminal from '../Terminal/index'
 import Footer from '../Footer/index';
+import { withRouter } from "react-router-dom";
 
 class Student extends Component {
     constructor(props) {
@@ -29,15 +30,15 @@ componentDidMount() {
         return (
             <React.Fragment>
                 <Header />
-                <div className="data-container">
+                <div className="data-container composant">
                     <div className="student-picture">
-                        <img src= '' alt="idiote"/>
+                        <img src={this.state.student.picture} alt="idiote"/>
                     </div>
                     <ul className="data-list">
                         <li>
                             Name : {this.state.student.name}
                         </li>
-                        <li>Last Name : {this.state.lastName}</li>
+                        <li>Last Name : {this.state.student.lastName}</li>
                         <li>Age : {this.state.student.age}</li>
                         <li>E-mail : {this.state.student.email}</li>
                         <li>GSM :</li>
@@ -46,9 +47,10 @@ componentDidMount() {
                         <li>Hard Skills : {this.state.student.hardkils}</li>
                     </ul>
                     <div className="terminal-container">
-                        <Terminal info={this.state.student} />
+                        <Terminal className="terminal-solution" info={this.state.student} />
                     </div>
                 </div>
+                <Footer className="footer" />
             </React.Fragment>
             
         );
@@ -56,4 +58,4 @@ componentDidMount() {
 };
 
 
-export default Student;
+export default withRouter(Student);

@@ -65,7 +65,7 @@ class Form extends React.Component {
         return (
             <React.Fragment>
                 <Header />
-                <div className="display-container">
+                <div className="display-container composant">
                 <div className="form-eleve">
                 <h1 className="title-form">Ajouter un étudiant</h1>
 

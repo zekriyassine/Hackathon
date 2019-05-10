@@ -13,7 +13,6 @@ const Portal = (props) => (
 				<img className="logo-wcs-portal" src={logo1} alt="logo1"/>
 			</NavLink>
 		</div>
-		<p className="bxl-txt">/bxl201903</p>
 	</div>
 
 )

@@ -69,7 +69,7 @@ class Vignette extends React.Component {
         const { startIndex, endIndex } = this.state;
 
         const listEleve = this.state.perso.slice(startIndex, startIndex + endIndex).map(elem => (
-            <NavLink to={`./Student/${elem._id}`} className="vignette-enfant">
+            <NavLink to={`./student/${elem._id}`} className="vignette-enfant">
                 <div className="image-container" style={{ backgroundImage: `url(${elem.picture})` }}>
                 </div>
 
@@ -84,6 +84,8 @@ class Vignette extends React.Component {
         return (
             <React.Fragment>
                 <Header />
+                <h1 className="texte-courant"> "De jeunes talents fraîchement formés aux toutes dernières thechnologies en matière de développement web ..."
+                </h1>
                 <div className="container-display">
                     
                     <div className="vignette-parent">

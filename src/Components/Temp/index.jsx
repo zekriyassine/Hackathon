@@ -4,8 +4,7 @@ import Student from '../Student/index';
 
 const Temp = ()=>(
     <React.Fragment>
-            <Student/>
-            <Terminal/>
+            <Student className="composant"/>
 
     </React.Fragment>
 )

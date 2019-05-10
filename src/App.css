@@ -2,5 +2,9 @@ body{
     background-color: #2f3640;
     font-family: 'Press Start 2P' sans-serif;
 }
+.composant {
+    position: relative;
+    min-height: 78vh;
+}
 
 

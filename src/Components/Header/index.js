@@ -33,7 +33,6 @@ class Header extends React.Component {
           </div>
           <ul className="navigation">
               <li><NavLink activeClassName="active" to="/home" >HOME</NavLink></li>
-              <li><NavLink activeClassName="active" to="">STUDENT</NavLink></li>
               <li><NavLink activeClassName="active" to="/form">MANAGEMENT</NavLink></li>
               <li><NavLink activeClassName="active" to=""></NavLink></li>
           </ul>
