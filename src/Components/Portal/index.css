@@ -1,13 +1,13 @@
 .portal-parent {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
     height: 100vh;
 }
 
 .logo-portal {
     text-align: center;
+    margin: auto;
 }
 
 .logo-portal img {
@@ -19,8 +19,10 @@
 
 .portal-parent p {
     color: white;
-    margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     font-size: 150%;
+}
+.logo-wcs-portal {
+  transform: rotateY(25deg);
 }
 
