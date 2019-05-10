@@ -2,6 +2,7 @@ import React from 'react'
 import './index.css'
 import Terminal from  '../Terminal/index'
 import Header from '../Header/index';
+import Footer from '../Footer/index';
 
 class Form extends React.Component {
     constructor(props) {
@@ -165,6 +166,9 @@ class Form extends React.Component {
                 <div className="terminal-form">
                 <Terminal  info={this.state}/>
                 </div>
+                <Footer />
+
+
                 
                 </div>
 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './index.css';
-import Header from '../Header/index';
-import Terminal from '../Terminal/index';
-import megan from "../../assets/images/megan-fox-pink-string-bikini.png";
+import Header from '../Header/index'
+import Terminal from '../Terminal/index'
+import Footer from '../Footer/index';
 
 class Student extends Component {
     constructor(props) {
@@ -31,7 +31,7 @@ componentDidMount() {
                 <Header />
                 <div className="data-container">
                     <div className="student-picture">
-                        <img src= {megan} alt="idiote"/>
+                        <img src= '' alt="idiote"/>
                     </div>
                     <ul className="data-list">
                         <li>

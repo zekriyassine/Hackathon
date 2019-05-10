@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom'
 import './index.css'
 import Header from '../Header/index';
+import Footer from '../Footer/index';
 import Terminal from '../Terminal/index';
 
 class Vignette extends React.Component {
@@ -94,6 +95,8 @@ class Vignette extends React.Component {
                     <Terminal info={this.state}  />
                     </div>
                 </div>
+                <Footer />
+
 
 
 
