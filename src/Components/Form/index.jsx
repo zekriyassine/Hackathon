@@ -3,22 +3,21 @@ import './index.css'
 import Terminal from  '../Terminal/index'
 import Header from '../Header/index';
 import Footer from '../Footer/index';
+import axios from 'axios';
+import {withRouter} from 'react-router-dom';
 
 class Form extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            
-            hardSkills: "",
-            softSkills: "",
+            hardSkills: [],
+            softSkills: [],
             name: "",
             lastName: "",
             picture: "",
             location: "",
             cv:"",
             age:""
-
-
         }
     }
     onChange = (event) => (
@@ -29,37 +28,29 @@ class Form extends React.Component {
     )
 
     fileChange = (event) => {
-        console.log(this._input.file)
-       /*  this.setState({
-            [event.target.name]: event.target.current.file[0].name,
-        }) */
+        let formData = new FormData();
+        const name = event.target.name;
+        formData.append('picture', event.target.files[0]);
+        axios({
+            method: 'post',
+            url: 'https://warm-sierra-59608.herokuapp.com/api/upload',
+            data: formData
+          })
+          .then(data => this.setState(
+              {[name]: data.data}
+          ))
+       
     }
     handleSubmit = (event) => {
         event.preventDefault();
-        let formData = new FormData();
-        formData.append('picture', this._picture.files[0]);
-
-        console.log(formData.get('picture'))
-
-        
-        const url = "https://warm-sierra-59608.herokuapp.com/api/add-user";
-        const config = {
-            method: "POST",
-            headers: {
-                "Content-Type": "multipart/form-data",
-            },
-            body:  formData
-        };
-
-        fetch(url, config)
-            .then(res => res.json())
-            .then(res => {
-                if (res.error) {
-                    alert(res.error);
-                } else {
-                    alert(`Elève enrengistré`);
-                }
-            }) 
+        console.log(JSON.stringify(this.state))
+        axios({
+            method: 'post',
+            url: 'https://warm-sierra-59608.herokuapp.com/api/add-user',
+            data: this.state
+          }).then(
+              this.props.history.push('/home')
+          )
     }
  
     render() {
@@ -150,7 +141,7 @@ class Form extends React.Component {
                                 accept="image/*"
                                 id="picture"
                                 name="picture"
-                                ref={(elem) => this._picture = elem}
+                                onChange={this.fileChange}
                                 placeholder="Photo"
 
 
@@ -162,7 +153,7 @@ class Form extends React.Component {
                             <input className="file" type="file"
                                 id="cv"
                                 name="cv"
-                                ref={(elem) => this._cv = elem}
+                                onChange={this.fileChange}                                
                                 placeholder="Votre Curriculum vitae"
 
                             />
@@ -189,4 +180,4 @@ class Form extends React.Component {
     }
 }
 
-export default Form;
+export default withRouter(Form);
