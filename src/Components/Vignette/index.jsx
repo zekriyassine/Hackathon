@@ -69,7 +69,7 @@ class Vignette extends React.Component {
         const { startIndex, endIndex } = this.state;
 
         const listEleve = this.state.perso.slice(startIndex, startIndex + endIndex).map(elem => (
-            <NavLink to={`./Student/${elem.id}`} className="vignette-enfant">
+            <NavLink to={`./Student/${elem._id}`} className="vignette-enfant">
                 <div className="image-container" style={{ backgroundImage: `url(${elem.picture})` }}>
                 </div>
 
@@ -92,7 +92,7 @@ class Vignette extends React.Component {
                         <label onClick={this.addOne} className="next">&#x203a;</label>
                     </div>
                     <div className="terminal">
-                    <Terminal info={this.state}  />
+                    <Terminal info={this.state.perso}  />
                     </div>
                 </div>
                 <Footer />

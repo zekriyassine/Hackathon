@@ -15,8 +15,8 @@ class Student extends Component {
 
 
 componentDidMount() {
-    
-    fetch(`https://warm-sierra-59608.herokuapp.com/api/user?userId=`)
+    const id = this.props.match.params.id
+    fetch(`https://warm-sierra-59608.herokuapp.com/api/user?userId=${id}`)
         .then(res => res.json())
         .then(data =>
              this.setState({ student : data }))

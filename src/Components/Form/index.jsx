@@ -166,11 +166,9 @@ class Form extends React.Component {
                 <div className="terminal-form">
                 <Terminal  info={this.state}/>
                 </div>
-                <Footer />
-
-
                 
                 </div>
+                <Footer />
 
 
             </React.Fragment>
