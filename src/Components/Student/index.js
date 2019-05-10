@@ -28,32 +28,29 @@ componentDidMount() {
 
         return (
             <React.Fragment>
-            <Header />
-            <div className="Student">
-
-                <ul>
-                    <li>
-                        Name : {this.state.student.name}
-                    </li>
-                    <li>Last Name : {this.state.lastName}</li>
-                    <li>Gender : {this.state.student.gender}</li>
-                    <li>Age : {this.state.student.age}</li>
-
-
-                    <li>E-mail : {this.state.student.email}</li>
-                    <li>GSM :</li>
-                    <li>
-                        Location : {this.state.student.location},
-                    
-                    </li>
-                    <li>CV :</li>
-                    <li>Soft Skills : {this.state.student.softSkills}</li>
-                    <li>Hard Skills : {this.state.student.hardkils}</li>
-                </ul>
-            </div>
-            <Terminal info={this.state.student} />
-            <Footer />
+                <Header />
+                <div className="data-container">
+                    <div className="student-picture">
+                        <img src= '' alt="idiote"/>
+                    </div>
+                    <ul className="data-list">
+                        <li>
+                            Name : {this.state.student.name}
+                        </li>
+                        <li>Last Name : {this.state.lastName}</li>
+                        <li>Age : {this.state.student.age}</li>
+                        <li>E-mail : {this.state.student.email}</li>
+                        <li>GSM :</li>
+                        <li>CV :</li>
+                        <li>Soft Skills : {this.state.student.softSkills}</li>
+                        <li>Hard Skills : {this.state.student.hardkils}</li>
+                    </ul>
+                    <div className="terminal-container">
+                        <Terminal info={this.state.student} />
+                    </div>
+                </div>
             </React.Fragment>
+            
         );
     };
 };
