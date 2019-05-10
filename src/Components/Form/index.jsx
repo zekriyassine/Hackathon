@@ -16,6 +16,7 @@ class Form extends React.Component {
             picture: "",
             location: "",
             cv:"",
+            age:""
 
 
         }
@@ -90,6 +91,18 @@ class Form extends React.Component {
                                 onChange={this.onChange}
                                 value={this.state.lastName}
                                 placeholder="Prénom"
+
+
+                            />
+                        </div>
+                        <div className="form-data">
+                            <label htmlFor="age">Age</label>
+                            <input type="text"
+                                id="age"
+                                name="age"
+                                onChange={this.onChange}
+                                value={this.state.age}
+                                placeholder="Age"
 
 
                             />
