@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>test</p>
+    <script>
+        const data = JSON.parse(localStorage.getItem('user'));
+        if (data !== null) {
+            
+            console.log(data.name)
+        }
+</script>
+
+</body>
+
+</html>
